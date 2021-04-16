@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Start</title>
+    <script src="js/bookMarkManager.js"></script>
+  </head>
+  <body>
+
+  <h2>My start page.</h2>
+
+  <form id="form" style="display: none;" method="dialog" onsubmit="setProperty()" onreset="style.display = none;">
+    <ul>
+      <li><label for="title">Title</label></li>
+      <li><input id="title" type="text" placeholder="Site name"></li>
+
+      <li><label for="link">Link</label></li>
+      <li><input id="link" type="text" placeholder="https://www.domain.com"></li>
+
+      <li><label for="folderName">Folder</label></li>
+      <li><input id="folderName" type="text" placeholder="Optional"></li>
+
+      <li><input id="folderId" type="hidden" value="5946"></li>
+      <li>
+      <button type="submit">Create</button>
+      <button type="reset">Close</button>
+      </li>
+    </ul>
+  </form>
+
+  <div>
+    <ul id="1000" ondrop="drop(event)" ondragover="allowDrop(event)" ondragstart="drag(event)">
+      <li><a onclick="callForm(1000)">Bookmarks</a></li>
+
+      <ul id="5449" draggable="true">
+      <li><a onclick="callForm(5449)">Tools</a><a onclick="deleteIten(5449)">X</a></li>
+
+      <li id="3640" draggable="true"><a href="https://www.php.net/" draggable="false">PHP1</a><a onclick="deleteIten(3640)" draggable="false">X</a></li>
+      <li id="6518" draggable="true"><a href="https://www.php.net/" draggable="false">PHP2</a><a onclick="deleteIten(6518)" draggable="false">X</a></li>
+      <li id="6510" draggable="true"><a href="https://www.php.net/" draggable="false">PHP3</a><a onclick="deleteIten(6510)" draggable="false">X</a></li>
+      </ul>
+
+      <ul id="5946" draggable="true">
+      <li><a onclick="callForm(5946)">Doc</a><a onclick="deleteIten(5946)">X</a></li>
+
+      <li id="6018" draggable="true"><a href="https://getbootstrap.com/" draggable="false">Bootstrap1</a><a onclick="deleteIten(6018)" draggable="false">X</a></li>
+      <li id="4413" draggable="true"><a href="https://getbootstrap.com/" draggable="false">Bootstrap2</a><a onclick="deleteIten(4413)" draggable="false">X</a></li>
+      </ul>
+    </ul>
+  </div>
+
+  </body>
+</html>
